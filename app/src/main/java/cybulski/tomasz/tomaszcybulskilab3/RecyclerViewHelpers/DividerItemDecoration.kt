@@ -1,4 +1,4 @@
-package cybulski.tomasz.tomaszcybulskilab3
+package cybulski.tomasz.tomaszcybulskilab3.RecyclerViewHelpers
 
 import android.content.Context
 import android.content.res.TypedArray

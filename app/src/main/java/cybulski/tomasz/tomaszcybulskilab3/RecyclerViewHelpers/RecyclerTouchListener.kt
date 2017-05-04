@@ -1,13 +1,14 @@
-package cybulski.tomasz.tomaszcybulskilab3
+package cybulski.tomasz.tomaszcybulskilab3.RecyclerViewHelpers
 
 import android.view.MotionEvent
 import android.support.v7.widget.RecyclerView
 import android.content.Context
 import android.view.GestureDetector
+import cybulski.tomasz.tomaszcybulskilab3.Abstract.IClickListener
 
 
 class RecyclerTouchListener(context: Context, recyclerView: RecyclerView,
-                            private val clickListener: ClickListener?)
+                            private val clickListener: IClickListener?)
     : RecyclerView.OnItemTouchListener {
 
     private val gestureDetector: GestureDetector

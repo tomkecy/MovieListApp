@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">TomaszCybulski.Lab3</string>
+    <string name="app_name">Movie App</string>
+    <string name="intent_extra_title">intent_extra_title</string>
+    <string name="intent_extra_genre">intent_extra_genre</string>
+    <string name="intent_extra_year">intent_extra_year</string>
 </resources>

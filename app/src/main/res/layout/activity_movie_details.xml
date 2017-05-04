@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cybulski.tomasz.tomaszcybulskilab3.MovieDetailsActivity">
+    tools:context="cybulski.tomasz.tomaszcybulskilab3.Activities.MovieDetailsActivity">
 
     <RatingBar
         android:id="@+id/ratingBar"

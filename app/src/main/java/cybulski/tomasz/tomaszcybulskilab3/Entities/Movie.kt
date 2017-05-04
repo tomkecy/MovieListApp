@@ -10,19 +10,13 @@ class Movie {
     var title: String? = null
     var genre: String? = null
     var year: String? = null
-    var picture: ImageView? = null
+    var pictureId: Int = 0
     var seen: Boolean = false
 
-    constructor()
-    constructor(title: String, genre: String, year: String) {
+    constructor(title: String, genre: String, year: String, pictureId: Int) {
         this.title = title
         this.genre = genre
         this.year = year
-    }
-    constructor(title: String, genre: String, year: String, picture: ImageView) {
-        this.title = title
-        this.genre = genre
-        this.year = year
-        this.picture = picture
+        this.pictureId = pictureId
     }
 }
