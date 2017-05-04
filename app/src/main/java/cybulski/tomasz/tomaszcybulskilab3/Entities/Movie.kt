@@ -8,17 +8,18 @@ import android.widget.ImageView
 
 class Movie {
     var title: String? = null
-    var genre: Genre? = null
+    var genre: String? = null
     var year: String? = null
     var picture: ImageView? = null
+    var seen: Boolean = false
 
     constructor()
-    constructor(title: String, genre: Genre, year: String) {
+    constructor(title: String, genre: String, year: String) {
         this.title = title
         this.genre = genre
         this.year = year
     }
-    constructor(title: String, genre: Genre, year: String, picture: ImageView) {
+    constructor(title: String, genre: String, year: String, picture: ImageView) {
         this.title = title
         this.genre = genre
         this.year = year
