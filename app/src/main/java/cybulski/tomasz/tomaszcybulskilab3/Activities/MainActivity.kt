@@ -46,8 +46,8 @@ class MainActivity : AppCompatActivity() {
                 var movie = moviesList[position]
                 val movieDetailsIntent = Intent(this@MainActivity, MovieDetailsActivity::class.java)
                 movieDetailsIntent.putExtra(getString(R.string.intent_extra_title), movie.title)
-                movieDetailsIntent.putExtra(getString(R.string.intent_extra_genre), movie.genre)
-                movieDetailsIntent.putExtra(getString(R.string.intent_extra_year), movie.year)
+                movieDetailsIntent.putExtra(getString(R.string.intent_extra_picture), movie.pictureId)
+                movieDetailsIntent.putExtra(getString(R.string.intent_extra_description), movie.description)
                 
                 startActivity(movieDetailsIntent)
             }
@@ -62,22 +62,38 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun prepareMovieData(): Unit{
-        moviesList.add(Movie("Mad Max: Fury Road", "Action & Adventure", "2015", R.mipmap.ic_launcher))
-        moviesList.add(Movie("Inside Out", "Animation, Kids & Family", "2015", R.mipmap.ic_launcher))
-        moviesList.add(Movie("Star Wars: Episode VII - The Force Awakens", "Action", "2015", R.mipmap.ic_launcher))
-        moviesList.add(Movie("Shaun the Sheep", "Animation", "2015", R.mipmap.ic_launcher))
-        moviesList.add(Movie("The Martian", "Science Fiction & Fantasy", "2015", R.mipmap.ic_launcher))
-        moviesList.add(Movie("Mission: Impossible Rogue Nation", "Action", "2015", R.mipmap.ic_launcher))
-        moviesList.add(Movie("Up", "Animation", "2009", R.mipmap.ic_launcher))
-        moviesList.add(Movie("Star Trek", "Science Fiction", "2009", R.mipmap.ic_launcher))
-        moviesList.add(Movie("The LEGO Movie", "Animation", "2014", R.mipmap.ic_launcher))
-        moviesList.add(Movie("Iron Man", "Action & Adventure", "2008", R.mipmap.ic_launcher))
-        moviesList.add(Movie("Aliens", "Science Fiction", "1986", R.mipmap.ic_launcher))
-        moviesList.add(Movie("Chicken Run", "Animation", "2000", R.mipmap.ic_launcher))
-        moviesList.add(Movie("Back to the Future", "Science Fiction", "1985", R.mipmap.ic_launcher))
-        moviesList.add(Movie("Raiders of the Lost Ark", "Action & Adventure", "1981", R.mipmap.ic_launcher))
-        moviesList.add(Movie("Goldfinger", "Action & Adventure", "1965", R.mipmap.ic_launcher))
-        moviesList.add(Movie("Guardians of the Galaxy", "Science Fiction & Fantasy", "2014", R.mipmap.ic_launcher))
+        moviesList.add(Movie("Mad Max: Fury Road", "Action & Adventure", "2015",
+                R.mipmap.ic_launcher, getString(R.string.mad_max_fury_road_description)))
+        moviesList.add(Movie("Inside Out", "Animation, Kids & Family", "2015",
+                R.mipmap.ic_launcher, getString(R.string.inside_out_description)))
+        moviesList.add(Movie("Star Wars: Episode VII - The Force Awakens", "Action",
+                "2015", R.mipmap.ic_launcher, getString(R.string.star_wars_description)))
+        moviesList.add(Movie("Shaun the Sheep", "Animation", "2015",
+                R.mipmap.ic_launcher, getString(R.string.shaun_the_ship_description)))
+        moviesList.add(Movie("The Martian", "Science Fiction & Fantasy", "2015",
+                R.mipmap.ic_launcher, getString(R.string.the_martian_description)))
+        moviesList.add(Movie("Mission: Impossible Rogue Nation", "Action", "2015",
+                R.mipmap.ic_launcher, getString(R.string.mission_impossible_description)))
+        moviesList.add(Movie("Up", "Animation", "2009",
+                R.mipmap.ic_launcher, getString(R.string.up_description)))
+        moviesList.add(Movie("Star Trek", "Science Fiction", "2009",
+                R.mipmap.ic_launcher, getString(R.string.star_trek_description)))
+        moviesList.add(Movie("The LEGO Movie", "Animation", "2014",
+                R.mipmap.ic_launcher, getString(R.string.the_lego_movie_description)))
+        moviesList.add(Movie("Iron Man", "Action & Adventure", "2008",
+                R.mipmap.ic_launcher, getString(R.string.iron_man_description)))
+        moviesList.add(Movie("Aliens", "Science Fiction", "1986",
+                R.mipmap.ic_launcher, getString(R.string.aliens_description)))
+        moviesList.add(Movie("Chicken Run", "Animation", "2000",
+                R.mipmap.ic_launcher, getString(R.string.chicken_run_description)))
+        moviesList.add(Movie("Back to the Future", "Science Fiction", "1985",
+                R.mipmap.ic_launcher,  getString(R.string.back_to_the_future_description)))
+        moviesList.add(Movie("Raiders of the Lost Ark", "Action & Adventure", "1981",
+                R.mipmap.ic_launcher, getString(R.string.raiders_of_the_lost_ark_description)))
+        moviesList.add(Movie("Goldfinger", "Action & Adventure", "1965",
+                R.mipmap.ic_launcher, getString(R.string.goldfinger_description)))
+        moviesList.add(Movie("Guardians of the Galaxy", "Science Fiction & Fantasy", "2014",
+                R.mipmap.ic_launcher, getString(R.string.guardians_of_the_galaxy_description)))
 
         moviesAdapter!!.notifyDataSetChanged()
     }

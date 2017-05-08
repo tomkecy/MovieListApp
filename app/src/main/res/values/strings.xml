@@ -1,6 +1,23 @@
 <resources>
     <string name="app_name">Movie App</string>
     <string name="intent_extra_title">intent_extra_title</string>
-    <string name="intent_extra_genre">intent_extra_genre</string>
-    <string name="intent_extra_year">intent_extra_year</string>
+    <string name="intent_extra_picture">intent_extra_picture</string>
+    <string name="intent_extra_description">intent_extra_description</string>
+    <string name="mad_max_fury_road_description">Max przyłącza się do grupy uciekinierek z Cytadeli - osady rządzonej przez Wiecznego Joe. Tyran wraz ze swoją bandą rusza za nimi w pościg.</string>
+    <string name="rating_label">Ocena: </string>
+    <string name="the_martian_description">Po nieudanej ekspedycji Mark zostaje sam na Marsie. Mimo znikomych zapasów oraz zerwanej łączności z dowództwem mężczyzna stara się przetrwać w trudnych warunkach.</string>
+    <string name="shaun_the_ship_description">Baranek Shaun wyrusza w pełną niebezpieczeństw i przygód wyprawę do miasta, aby ratować z tarapatów gospodarza swojej farmy.</string>
+    <string name="up_description">70-letni Carl po śmierci żony zamienia swój dom w statek powietrzny i odlatuje do Ameryki Południowej, by spełnić swoje marzenie. Przez przypadek zabiera ze sobą ośmioletniego skauta.</string>
+    <string name="star_trek_description">Początki załogi USS Enterprise. James Kirk i Spock łączą siły, by ocalić swoich przyjaciół przed śmiertelnym niebezpieczeństwem. </string>
+    <string name="the_lego_movie_description">Emmet, przeciętna minifigurka LEGO, zostaje wzięty za wybranego do ocalenia świata. W ten sposób dołącza do drużyny, która ma powstrzymać złowrogiego tyrana.</string>
+    <string name="iron_man_description">Tony Stark buduje supernowoczesną zbroję. Multimiliarder postanawia walczyć ze złem jako Iron Man.</string>
+    <string name="aliens_description">Ripley razem z oddziałem komandosów wyrusza na pomoc mieszkańcom planety, na której pojawili się obcy. </string>
+    <string name="chicken_run_description">Zamknięci, otoczeni drutem kolczastym, drżący o swoje życie Rocky, Ginger, Bunty oraz Fowler podejmują rozpaczliwą próbę ucieczki. I oto po raz pierwszy w historii filmu będziemy mogli śledzić przygody... bohaterskiego drobiu! Akcja tej niezwykłej, animowanej komedii rozgrywa się bowiem na fermie, gdzie każda kura, która nie znosi tylu jajek, ile powinna, kończy w potrawce. Ale Ginger i jej kumple nie mają zamiaru czekać bezczynnie na sfiletowanie. Przygotowują podkop i wydostają się na wolność. </string>
+    <string name="raiders_of_the_lost_ark_description">Indiana Jones wyrusza do Egiptu, gdzie prawdopodobnie odkryto miejsce przechowywania Arki Przymierza. Nie może dopuścić, by trofeum znalazło się w rękach nazistów.</string>
+    <string name="back_to_the_future_description">W 1985 roku dr Emmett Brown buduje wehikuł czasu. Jego przyjaciel Marty McFly przenosi się w lata 50. i niechcący przeszkadza w poznaniu się swoim rodzicom.</string>
+    <string name="goldfinger_description">Agent 007 mierzy się z multimilionerem Aurikiem Goldfingerem, który chce obrabować Fort Knox.</string>
+    <string name="guardians_of_the_galaxy_description">Zuchwały awanturnik Peter Quill kradnie tajemniczy artefakt będący obiektem pożądania złego i potężnego Ronana, którego ambicje zagrażają całemu wszechświatowi.</string>
+    <string name="inside_out_description">Życiem Riley kieruje pięć emocji: Radość, Strach, Gniew, Odraza i Smutek. Pozostałe próbują zakłócić pierwszą, gdy dziewczyna przeprowadza się z rodzicami do San Francisco.</string>
+    <string name="star_wars_description">Złe Imperium zostaje zastąpione przez Najwyższy Porządek, który chce władzy nad galaktyką. Plany wrogiej organizacji może pokrzyżować Ruch Oporu.</string>
+    <string name="mission_impossible_description">Agent IMF Ethan Hunt wraz ze swoim ludźmi mierzy się z organizacją Syndykat.</string>
 </resources>
