@@ -10,10 +10,13 @@ import cybulski.tomasz.tomaszcybulskilab3.Entities.Movie
 import cybulski.tomasz.tomaszcybulskilab3.R
 import kotlinx.android.synthetic.main.movie_list_row.view.*
 
+
+
 /**
  * Created by tomcy on 18.04.2017.
  */
-class MoviesAdapter(var moviesList: List<Movie>): RecyclerView.Adapter<MoviesAdapter.MyViewHolder>(){
+class MoviesAdapter(var moviesList: MutableList<Movie>): RecyclerView.Adapter<MoviesAdapter.MyViewHolder>(){
+
     inner class MyViewHolder(view: View): RecyclerView.ViewHolder(view) {
         var title: TextView = view.text_view_title
         var genre: TextView = view.text_view_genre
@@ -50,4 +53,10 @@ class MoviesAdapter(var moviesList: List<Movie>): RecyclerView.Adapter<MoviesAda
     }
 
     override fun getItemViewType(position: Int): Int = position%2
+
+    fun removeItem(position: Int) {
+        moviesList.removeAt(position)
+        notifyItemRemoved(position)
+        notifyItemRangeChanged(position, moviesList.size)
+    }
 }

@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cybulski.tomasz.tomaszcybulskilab3.Activities.Fragments.MoviePicturesFragment">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_first_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_view_picture1"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_view_picture2"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_second_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_layout_first_row">
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/image_view_picture3"
+           />
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/image_view_picture4"
+           />
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/linear_layout_second_row"
+        android:id="@+id/linear_layout_third_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_view_picture5"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_view_picture6"
+            />
+    </LinearLayout>
+</RelativeLayout>

@@ -13,6 +13,7 @@ import cybulski.tomasz.tomaszcybulskilab3.RecyclerViewHelpers.DividerItemDecorat
 import cybulski.tomasz.tomaszcybulskilab3.RecyclerViewHelpers.MoviesAdapter
 import cybulski.tomasz.tomaszcybulskilab3.R
 import cybulski.tomasz.tomaszcybulskilab3.RecyclerViewHelpers.RecyclerTouchListener
+import android.support.v7.widget.helper.ItemTouchHelper
 
 
 class MainActivity : AppCompatActivity() {
@@ -30,6 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         setupRecyclerView()
         prepareMovieData()
+        initSwipe()
     }
 
     private fun setupRecyclerView() {
@@ -43,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView!!.addOnItemTouchListener(RecyclerTouchListener(applicationContext,
                 recyclerView!!, object : IClickListener {
             override fun onClick(view: View, position: Int) {
-                var movie = moviesList[position]
+                val movie = moviesList[position]
                 val movieDetailsIntent = Intent(this@MainActivity, MovieDetailsActivity::class.java)
                 movieDetailsIntent.putExtra(getString(R.string.intent_extra_title), movie.title)
                 movieDetailsIntent.putExtra(getString(R.string.intent_extra_picture), movie.pictureId)
@@ -63,38 +65,57 @@ class MainActivity : AppCompatActivity() {
 
     private fun prepareMovieData(): Unit{
         moviesList.add(Movie("Mad Max: Fury Road", "Action & Adventure", "2015",
-                R.mipmap.ic_launcher, getString(R.string.mad_max_fury_road_description)))
+                R.mipmap.ic_mad_max, getString(R.string.mad_max_fury_road_description)))
         moviesList.add(Movie("Inside Out", "Animation, Kids & Family", "2015",
-                R.mipmap.ic_launcher, getString(R.string.inside_out_description)))
+                R.mipmap.ic_inside_out, getString(R.string.inside_out_description)))
         moviesList.add(Movie("Star Wars: Episode VII - The Force Awakens", "Action",
-                "2015", R.mipmap.ic_launcher, getString(R.string.star_wars_description)))
+                "2015", R.mipmap.ic_star_wars, getString(R.string.star_wars_description)))
         moviesList.add(Movie("Shaun the Sheep", "Animation", "2015",
-                R.mipmap.ic_launcher, getString(R.string.shaun_the_ship_description)))
+                R.mipmap.ic_shaun, getString(R.string.shaun_the_ship_description)))
         moviesList.add(Movie("The Martian", "Science Fiction & Fantasy", "2015",
-                R.mipmap.ic_launcher, getString(R.string.the_martian_description)))
+                R.mipmap.ic_martian, getString(R.string.the_martian_description)))
         moviesList.add(Movie("Mission: Impossible Rogue Nation", "Action", "2015",
-                R.mipmap.ic_launcher, getString(R.string.mission_impossible_description)))
+                R.mipmap.ic_mission_impossible, getString(R.string.mission_impossible_description)))
         moviesList.add(Movie("Up", "Animation", "2009",
-                R.mipmap.ic_launcher, getString(R.string.up_description)))
+                R.mipmap.ic_up, getString(R.string.up_description)))
         moviesList.add(Movie("Star Trek", "Science Fiction", "2009",
-                R.mipmap.ic_launcher, getString(R.string.star_trek_description)))
+                R.mipmap.ic_star_trek, getString(R.string.star_trek_description)))
         moviesList.add(Movie("The LEGO Movie", "Animation", "2014",
-                R.mipmap.ic_launcher, getString(R.string.the_lego_movie_description)))
+                R.mipmap.ic_lego, getString(R.string.the_lego_movie_description)))
         moviesList.add(Movie("Iron Man", "Action & Adventure", "2008",
-                R.mipmap.ic_launcher, getString(R.string.iron_man_description)))
+                R.mipmap.ic_iron_man, getString(R.string.iron_man_description)))
         moviesList.add(Movie("Aliens", "Science Fiction", "1986",
-                R.mipmap.ic_launcher, getString(R.string.aliens_description)))
+                R.mipmap.ic_aliens, getString(R.string.aliens_description)))
         moviesList.add(Movie("Chicken Run", "Animation", "2000",
-                R.mipmap.ic_launcher, getString(R.string.chicken_run_description)))
+                R.mipmap.ic_chicken_run, getString(R.string.chicken_run_description)))
         moviesList.add(Movie("Back to the Future", "Science Fiction", "1985",
-                R.mipmap.ic_launcher,  getString(R.string.back_to_the_future_description)))
+                R.mipmap.ic_back_to_the_future,  getString(R.string.back_to_the_future_description)))
         moviesList.add(Movie("Raiders of the Lost Ark", "Action & Adventure", "1981",
-                R.mipmap.ic_launcher, getString(R.string.raiders_of_the_lost_ark_description)))
+                R.mipmap.ic_raiders, getString(R.string.raiders_of_the_lost_ark_description)))
         moviesList.add(Movie("Goldfinger", "Action & Adventure", "1965",
-                R.mipmap.ic_launcher, getString(R.string.goldfinger_description)))
+                R.mipmap.ic_goldfinger, getString(R.string.goldfinger_description)))
         moviesList.add(Movie("Guardians of the Galaxy", "Science Fiction & Fantasy", "2014",
-                R.mipmap.ic_launcher, getString(R.string.guardians_of_the_galaxy_description)))
+                R.mipmap.ic_guardians_of_the_galaxy, getString(R.string.guardians_of_the_galaxy_description)))
 
         moviesAdapter!!.notifyDataSetChanged()
+    }
+
+    private fun initSwipe() {
+        val simpleItemTouchCallback = object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
+
+            override fun onMove(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder, target: RecyclerView.ViewHolder): Boolean {
+                return false
+            }
+
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                val position = viewHolder.adapterPosition
+
+                if (direction == ItemTouchHelper.LEFT) {
+                    moviesAdapter!!.removeItem(position)
+                }
+            }
+        }
+        val itemTouchHelper = ItemTouchHelper(simpleItemTouchCallback)
+        itemTouchHelper.attachToRecyclerView(recyclerView)
     }
 }
