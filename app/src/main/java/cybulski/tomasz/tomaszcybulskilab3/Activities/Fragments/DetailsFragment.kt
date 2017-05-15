@@ -11,7 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import cybulski.tomasz.tomaszcybulskilab3.R
-import kotlinx.android.synthetic.main.fragment_details.*
+import kotlinx.android.synthetic.main.fragment_details.view.*
 
 
 /**
@@ -33,13 +33,13 @@ class DetailsFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
-        val DETAILS_VIEW = inflater!!.inflate(R.layout.fragment_details, container, false)
-        
-        //text_view_movie_title.text = arguments.getString(MOVIE_TITLE_KEY)
-        //text_view_movie_description.text = arguments.getString(MOVIE_DESCRIPTION_KEY)
-        //image_view_movie_picture.setImageResource(arguments.getInt(MOVIE_PICTURE_ID_KEY))
-
-        return DETAILS_VIEW
+        val detailsFragmentView = inflater!!.inflate(R.layout.fragment_details, container, false)
+        if (arguments!=null) {
+            detailsFragmentView.text_view_movie_title.text = arguments.getString(MOVIE_TITLE_KEY)
+            detailsFragmentView.text_view_movie_description.text = arguments.getString(MOVIE_DESCRIPTION_KEY)
+            detailsFragmentView.image_view_movie_picture.setImageResource(arguments.getInt(MOVIE_PICTURE_ID_KEY))
+        }
+        return detailsFragmentView
     }
 
     // TODO: Rename method, update argument and hook method into UI event

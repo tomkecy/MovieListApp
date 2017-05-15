@@ -11,15 +11,15 @@ class MovieDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_details)
 
-        val MOVIE_TITLE = intent.getStringExtra(getString(R.string.intent_extra_title))
-        val MOVIE_PICTURE_ID: Int = intent.getIntExtra(getString(R.string.intent_extra_picture),0)
-        val MOVIE_DESCRIPTION = intent.getStringExtra(getString(R.string.intent_extra_description))
+        val movieTitle = intent.getStringExtra(getString(R.string.intent_extra_title))
+        val moviePictureId: Int = intent.getIntExtra(getString(R.string.intent_extra_picture),0)
+        val movieDescription = intent.getStringExtra(getString(R.string.intent_extra_description))
 
-        val DETAILS_FRAGMENT = DetailsFragment.newInstance(MOVIE_TITLE, MOVIE_DESCRIPTION, MOVIE_PICTURE_ID)
-        val FRAGMENT_MANAGER = supportFragmentManager
-        val FRAGMENT_TRANSACTION = FRAGMENT_MANAGER.beginTransaction()
-        FRAGMENT_TRANSACTION.add(R.id.fragment_container, DETAILS_FRAGMENT)
-        FRAGMENT_TRANSACTION.commit()
+        val detailsFragment = DetailsFragment.newInstance(movieTitle, movieDescription, moviePictureId)
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.fragment_container, detailsFragment)
+        fragmentTransaction.commit()
 
     }
 }
