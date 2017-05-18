@@ -45,7 +45,7 @@ class MoviesAdapter(var moviesList: MutableList<Movie>): RecyclerView.Adapter<Mo
         holder.genre.text = movie.genre
         holder.year.text = movie.year
         holder.seen.visibility = if (movie.seen) View.VISIBLE else View.INVISIBLE
-        holder.picture.setImageResource(movie.pictureId)
+        holder.picture.setBackgroundResource(movie.pictureId)
     }
 
     override fun getItemCount(): Int {

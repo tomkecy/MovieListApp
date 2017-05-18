@@ -65,37 +65,37 @@ class MainActivity : AppCompatActivity() {
 
     private fun prepareMovieData(): Unit{
         moviesList.add(Movie("Mad Max: Fury Road", "Action & Adventure", "2015",
-                R.mipmap.ic_mad_max, getString(R.string.mad_max_fury_road_description)))
-        moviesList.add(Movie("Inside Out", "Animation, Kids & Family", "2015",
-                R.mipmap.ic_inside_out, getString(R.string.inside_out_description)))
-        moviesList.add(Movie("Star Wars: Episode VII - The Force Awakens", "Action",
-                "2015", R.mipmap.ic_star_wars, getString(R.string.star_wars_description)))
+                R.drawable.madmax, getString(R.string.mad_max_fury_road_description)))
+        //moviesList.add(Movie("Inside Out", "Animation, Kids & Family", "2015",
+        //        R.drawable.insideout, getString(R.string.inside_out_description)))
+        moviesList.add(Movie("Star Wars: Episode VII - The Force Awakens", "Action", "2015",
+                R.drawable.starwars, getString(R.string.star_wars_description)))
         moviesList.add(Movie("Shaun the Sheep", "Animation", "2015",
-                R.mipmap.ic_shaun, getString(R.string.shaun_the_ship_description)))
-        moviesList.add(Movie("The Martian", "Science Fiction & Fantasy", "2015",
-                R.mipmap.ic_martian, getString(R.string.the_martian_description)))
-        moviesList.add(Movie("Mission: Impossible Rogue Nation", "Action", "2015",
-                R.mipmap.ic_mission_impossible, getString(R.string.mission_impossible_description)))
+                R.drawable.shaun, getString(R.string.shaun_the_ship_description)))
+        //moviesList.add(Movie("The Martian", "Science Fiction & Fantasy", "2015",
+        //        R.drawable.martian, getString(R.string.the_martian_description)))
+        //moviesList.add(Movie("Mission: Impossible Rogue Nation", "Action", "2015",
+         //       R.drawable.missionimpossible, getString(R.string.mission_impossible_description)))
         moviesList.add(Movie("Up", "Animation", "2009",
-                R.mipmap.ic_up, getString(R.string.up_description)))
-        moviesList.add(Movie("Star Trek", "Science Fiction", "2009",
-                R.mipmap.ic_star_trek, getString(R.string.star_trek_description)))
-        moviesList.add(Movie("The LEGO Movie", "Animation", "2014",
-                R.mipmap.ic_lego, getString(R.string.the_lego_movie_description)))
-        moviesList.add(Movie("Iron Man", "Action & Adventure", "2008",
-                R.mipmap.ic_iron_man, getString(R.string.iron_man_description)))
-        moviesList.add(Movie("Aliens", "Science Fiction", "1986",
-                R.mipmap.ic_aliens, getString(R.string.aliens_description)))
-        moviesList.add(Movie("Chicken Run", "Animation", "2000",
-                R.mipmap.ic_chicken_run, getString(R.string.chicken_run_description)))
-        moviesList.add(Movie("Back to the Future", "Science Fiction", "1985",
-                R.mipmap.ic_back_to_the_future,  getString(R.string.back_to_the_future_description)))
-        moviesList.add(Movie("Raiders of the Lost Ark", "Action & Adventure", "1981",
-                R.mipmap.ic_raiders, getString(R.string.raiders_of_the_lost_ark_description)))
-        moviesList.add(Movie("Goldfinger", "Action & Adventure", "1965",
-                R.mipmap.ic_goldfinger, getString(R.string.goldfinger_description)))
-        moviesList.add(Movie("Guardians of the Galaxy", "Science Fiction & Fantasy", "2014",
-                R.mipmap.ic_guardians_of_the_galaxy, getString(R.string.guardians_of_the_galaxy_description)))
+                R.drawable.up, getString(R.string.up_description)))
+        //moviesList.add(Movie("Star Trek", "Science Fiction", "2009",
+         //       R.drawable.startrek, getString(R.string.star_trek_description)))
+        //moviesList.add(Movie("The LEGO Movie", "Animation", "2014",
+         //       R.drawable.lego, getString(R.string.the_lego_movie_description)))
+        //moviesList.add(Movie("Iron Man", "Action & Adventure", "2008",
+        //        R.drawable.ironman, getString(R.string.iron_man_description)))
+        //moviesList.add(Movie("Aliens", "Science Fiction", "1986",
+        //        R.drawable.aliens, getString(R.string.aliens_description)))
+        //moviesList.add(Movie("Chicken Run", "Animation", "2000",
+         //       R.drawable.chickenrun, getString(R.string.chicken_run_description)))
+        //moviesList.add(Movie("Back to the Future", "Science Fiction", "1985",
+        //        R.drawable.backtothefuture,  getString(R.string.back_to_the_future_description)))
+        //moviesList.add(Movie("Raiders of the Lost Ark", "Action & Adventure", "1981",
+         //       R.drawable.raidersoflostarc, getString(R.string.raiders_of_the_lost_ark_description)))
+        //moviesList.add(Movie("Goldfinger", "Action & Adventure", "1965",
+         //       R.drawable.goldfinger, getString(R.string.goldfinger_description)))
+        //moviesList.add(Movie("Guardians of the Galaxy", "Science Fiction & Fantasy", "2014",
+          //      R.drawable.guardians, getString(R.string.guardians_of_the_galaxy_description)))
 
         moviesAdapter!!.notifyDataSetChanged()
     }
