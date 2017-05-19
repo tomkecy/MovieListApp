@@ -21,6 +21,9 @@
     <string name="star_wars_description">Złe Imperium zostaje zastąpione przez Najwyższy Porządek, który chce władzy nad galaktyką. Plany wrogiej organizacji może pokrzyżować Ruch Oporu.</string>
     <string name="mission_impossible_description">Agent IMF Ethan Hunt wraz ze swoim ludźmi mierzy się z organizacją Syndykat.</string>
     <string name="movie_details_image_description">Movie image</string>
+    <string name="title_activity_details">DetailsActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 
 
 </resources>
