@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="cybulski.tomasz.tomaszcybulskilab3.Activities.MovieDetailsActivity">
+    android:layout_height="wrap_content"
+    tools:context="cybulski.tomasz.tomaszcybulskilab3.Activities.MovieDetailsActivity"
+    >
 
     <ImageView
         android:id="@+id/image_view_movie_picture"

@@ -9,19 +9,18 @@ import android.view.View
 import android.view.ViewGroup
 
 import cybulski.tomasz.tomaszcybulskilab3.R
+import kotlinx.android.synthetic.main.fragment_movie_pictures.*
+import kotlinx.android.synthetic.main.fragment_movie_pictures.view.*
 
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [CastFragment.OnFragmentInteractionListener] interface
+ * [MoviePicturesFragment.OnFragmentInteractionListener] interface
  * to handle interaction events.
- * Use the [CastFragment.newInstance] factory method to
+ * Use the [MoviePicturesFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class CastFragment : Fragment() {
-
-
-    private var mListener: OnFragmentInteractionListener? = null
+class MoviePicturesFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,28 +29,23 @@ class CastFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater!!.inflate(R.layout.fragment_cast, container, false)
+        val movieFragmentView = inflater!!.inflate(R.layout.fragment_movie_pictures, container, false)
+        movieFragmentView.image_view_picture_1.setImageResource(R.drawable.one)
+        movieFragmentView.image_view_picture_2.setImageResource(R.drawable.two)
+        movieFragmentView.image_view_picture_3.setImageResource(R.drawable.three)
+        movieFragmentView.image_view_picture_4.setImageResource(R.drawable.four)
+        movieFragmentView.image_view_picture_5.setImageResource(R.drawable.five)
+        movieFragmentView.image_view_picture_6.setImageResource(R.drawable.six)
+        return movieFragmentView
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    fun onButtonPressed(uri: Uri) {
-        if (mListener != null) {
-            mListener!!.onFragmentInteraction(uri)
-        }
-    }
 
     override fun onAttach(context: Context?) {
         super.onAttach(context)
-        if (context is OnFragmentInteractionListener) {
-            mListener = context as OnFragmentInteractionListener?
-        } else {
-            throw RuntimeException(context!!.toString() + " must implement OnFragmentInteractionListener")
-        }
     }
 
     override fun onDetach() {
         super.onDetach()
-        mListener = null
     }
 
     /**
@@ -64,7 +58,6 @@ class CastFragment : Fragment() {
      * See the Android Training lesson [Communicating with Other Fragments](http://developer.android.com/training/basics/fragments/communicating.html) for more information.
      */
     interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         fun onFragmentInteraction(uri: Uri)
     }
 
@@ -74,12 +67,10 @@ class CastFragment : Fragment() {
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
 
-         * *
-         * @return A new instance of fragment CastFragment.
+         * @return A new instance of fragment MoviePicturesFragment.
          */
-        // TODO: Rename and change types and number of parameters
-        fun newInstance(): CastFragment {
-            val fragment = CastFragment()
+        fun newInstance(): MoviePicturesFragment {
+            val fragment = MoviePicturesFragment()
             val args = Bundle()
             fragment.arguments = args
             return fragment

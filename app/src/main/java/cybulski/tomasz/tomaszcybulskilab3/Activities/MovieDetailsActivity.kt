@@ -1,5 +1,6 @@
 package cybulski.tomasz.tomaszcybulskilab3.Activities
 
+import android.net.Uri
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
@@ -8,14 +9,17 @@ import android.os.Bundle
 import android.support.v4.app.FragmentActivity
 import android.view.Menu
 import android.view.MenuItem
-
+import cybulski.tomasz.tomaszcybulskilab3.Activities.Fragments.CastFragment
+import cybulski.tomasz.tomaszcybulskilab3.Activities.Fragments.ContainerFragment
 import cybulski.tomasz.tomaszcybulskilab3.Activities.Fragments.DetailsFragment
 import cybulski.tomasz.tomaszcybulskilab3.Activities.Fragments.MoviePicturesFragment
 
 import cybulski.tomasz.tomaszcybulskilab3.R
 import kotlinx.android.synthetic.main.activity_movie_details.*
 
-class MovieDetailsActivity : FragmentActivity () {
+class MovieDetailsActivity : FragmentActivity (), ContainerFragment.OnFragmentInteractionListener,
+        CastFragment.OnFragmentInteractionListener, DetailsFragment.OnFragmentInteractionListener,
+MoviePicturesFragment.OnFragmentInteractionListener{
 
     /**
      * The [android.support.v4.view.PagerAdapter] that will provide
@@ -62,6 +66,10 @@ class MovieDetailsActivity : FragmentActivity () {
         return super.onOptionsItemSelected(item)
     }
 
+    override fun onFragmentInteraction(uri: Uri) {
+
+    }
+
     /**
      * A [FragmentPagerAdapter] that returns a fragment corresponding to
      * one of the sections/tabs/pages.
@@ -71,7 +79,7 @@ class MovieDetailsActivity : FragmentActivity () {
         override fun getItem(position: Int): Fragment {
             when (position) {
                 0 -> return DetailsFragment.newInstance(movieTitle!!, movieDescription!!, moviePictureId!!)
-                //1 -> return MoviePicturesFragment.newInstance("dupa", "dupa")
+                1 -> return ContainerFragment.newInstance()
             }
             return DetailsFragment.newInstance(movieTitle!!, movieDescription!!, moviePictureId!!)
         }
