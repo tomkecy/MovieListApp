@@ -67,8 +67,8 @@ class MainActivity : AppCompatActivity() {
     private fun prepareMovieData(): Unit{
         moviesList.add(Movie("Mad Max: Fury Road", "Action & Adventure", "2015",
                 R.drawable.madmax, getString(R.string.mad_max_fury_road_description)))
-        //moviesList.add(Movie("Inside Out", "Animation, Kids & Family", "2015",
-        //        R.drawable.insideout, getString(R.string.inside_out_description)))
+        moviesList.add(Movie("Inside Out", "Animation, Kids & Family", "2015",
+                R.drawable.insideout, getString(R.string.inside_out_description)))
         //moviesList.add(Movie("Star Wars: Episode VII - The Force Awakens", "Action", "2015",
          //       R.drawable.starwars, getString(R.string.star_wars_description)))
         //moviesList.add(Movie("Shaun the Sheep", "Animation", "2015",

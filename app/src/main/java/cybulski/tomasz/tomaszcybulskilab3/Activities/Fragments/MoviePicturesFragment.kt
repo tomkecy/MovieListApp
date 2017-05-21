@@ -31,11 +31,11 @@ class MoviePicturesFragment : Fragment() {
         // Inflate the layout for this fragment
         val movieFragmentView = inflater!!.inflate(R.layout.fragment_movie_pictures, container, false)
         movieFragmentView.image_view_picture_1.setImageResource(R.drawable.one)
-        movieFragmentView.image_view_picture_2.setImageResource(R.drawable.two)
-        movieFragmentView.image_view_picture_3.setImageResource(R.drawable.three)
-        movieFragmentView.image_view_picture_4.setImageResource(R.drawable.four)
-        movieFragmentView.image_view_picture_5.setImageResource(R.drawable.five)
-        movieFragmentView.image_view_picture_6.setImageResource(R.drawable.six)
+        //movieFragmentView.image_view_picture_2.setImageResource(R.drawable.two)
+        //movieFragmentView.image_view_picture_3.setImageResource(R.drawable.three)
+        //movieFragmentView.image_view_picture_4.setImageResource(R.drawable.four)
+        //movieFragmentView.image_view_picture_5.setImageResource(R.drawable.five)
+        //movieFragmentView.image_view_picture_6.setBackgroundResource(R.drawable.six)
         return movieFragmentView
     }
 
