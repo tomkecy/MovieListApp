@@ -12,6 +12,9 @@ import android.view.ViewGroup
 
 import cybulski.tomasz.tomaszcybulskilab3.R
 import kotlinx.android.synthetic.main.fragment_details.view.*
+import android.text.method.ScrollingMovementMethod
+
+
 
 
 /**
@@ -38,6 +41,7 @@ class DetailsFragment : Fragment() {
             detailsFragmentView.text_view_movie_title.text = arguments.getString(MOVIE_TITLE_KEY)
             detailsFragmentView.text_view_movie_description.text = arguments.getString(MOVIE_DESCRIPTION_KEY)
             detailsFragmentView.image_view_movie_picture.setBackgroundResource(arguments.getInt(MOVIE_PICTURE_ID_KEY))
+            detailsFragmentView.text_view_movie_description.movementMethod = ScrollingMovementMethod()
         }
         return detailsFragmentView
     }

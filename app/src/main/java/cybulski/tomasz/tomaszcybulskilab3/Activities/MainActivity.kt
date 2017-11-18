@@ -69,12 +69,12 @@ class MainActivity : AppCompatActivity() {
                 R.drawable.madmax, getString(R.string.mad_max_fury_road_description)))
         moviesList.add(Movie("Inside Out", "Animation, Kids & Family", "2015",
                 R.drawable.insideout, getString(R.string.inside_out_description)))
-        //moviesList.add(Movie("Star Wars: Episode VII - The Force Awakens", "Action", "2015",
-         //       R.drawable.starwars, getString(R.string.star_wars_description)))
+        moviesList.add(Movie("Star Wars: Episode VII - The Force Awakens", "Action", "2015",
+                R.drawable.starwars, getString(R.string.star_wars_description)))
         //moviesList.add(Movie("Shaun the Sheep", "Animation", "2015",
-        //        R.drawable.shaun, getString(R.string.shaun_the_ship_description)))
+         //       R.drawable.shaun, getString(R.string.shaun_the_ship_description)))
         //moviesList.add(Movie("The Martian", "Science Fiction & Fantasy", "2015",
-         //       R.drawable.martian, getString(R.string.the_martian_description)))
+         //      R.drawable.martian, getString(R.string.the_martian_description)))
         //moviesList.add(Movie("Mission: Impossible Rogue Nation", "Action", "2015",
         //       R.drawable.missionimpossible, getString(R.string.mission_impossible_description)))
         //moviesList.add(Movie("Up", "Animation", "2009",
